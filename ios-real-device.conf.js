@@ -36,7 +36,8 @@ export const config = {
     path: "/wd/hub",
     product: "appAutomation",
     hostname: process.env.LT_GRID_URL||"mobile-hub.lambdatest.com",
-    port: 80,
+    protocol: 'https',
+    port: 443,
   
     framework: "mocha",
     mochaOpts: {
