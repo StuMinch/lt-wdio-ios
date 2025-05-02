@@ -1,11 +1,13 @@
 describe('Log Out of My TRR', () => {  
     it('should tap My TRR button', async () => {
       const button = await $('~My TRR');
+      await button.waitForDisplayed();
       button.click();
     });
 
     it('should tap sign in', async () => {
       const button = await $('~SIGN IN');
+      await button.waitForDisplayed();
       button.click();
     });
 
@@ -21,37 +23,53 @@ describe('Log Out of My TRR', () => {
 
     it('should tap sign in', async () => {
       const button = await $('~SIGN IN');
+      await button.waitForDisplayed();
       button.click();
     });
 
-    it('should proceed with walkthrough', async () => {
-      const nextbutton = await $('~referrals.tutorial.cta.next');
-      await nextbutton.waitForDisplayed({ timeout: 40000 });
-      nextbutton.click();
-
-      const gotitbutton = await $('~referrals.tutorial.cta.got it');
-      await gotitbutton.waitForDisplayed({ timeout: 40000 });
-      gotitbutton.click();
-
-      const mytrrbutton = await $('~My TRR');
-      await mytrrbutton.waitForDisplayed({ timeout: 40000 });
-      mytrrbutton.click();
-
-      const gotitbutton2 = await $('~GOT IT');
-      await gotitbutton2.waitForDisplayed({ timeout: 40000 });
-      gotitbutton2.click();
+    it('should tap next', async () => {
+      const button = await $('~referrals.tutorial.cta.next');
+      await button.waitForDisplayed();
+      button.click();
     });
 
-    it('should tap Settings and logout', async () => {
-      const settings = await $('~Settings');
-      settings.click();
+    it('should tap got it', async () => {
+      const button = await $('~referrals.tutorial.cta.got it');
+      await button.waitForDisplayed();
+      button.click();
+    });
 
+    it('should tap My TRR button', async () => {
+      const button = await $('~My TRR');
+      await button.waitForDisplayed();
+      button.click();
+    });
+
+    it('should tap got it', async () => {
+      const button = await $('~GOT IT');
+      await button.waitForDisplayed();
+      button.click();
+    });
+
+    it('should tap Settings', async () => {
+      const settings = await $('~Settings');
+      await settings.click();
+    });
+
+    it('should scroll down to log out', async () => {
       await driver.execute('mobile: scroll', { 
         direction: 'down', 
         predicateString: 'name == "Log Out"' 
       });
+    
+      // iOS class chain
+      //const selector = await '**/XCUIElementTypeStaticText[`name == "Log Out"`][2]'
+      //const logout = await $(`-ios class chain:${selector}`)
+      //await logout.click()
       
-      const logout = await $('(//XCUIElementTypeButton[@name="Log Out"])[2]');
-      await logout.click();
-    });
+      // XPATH
+      const button = await $('(//XCUIElementTypeButton[@name="Log Out"])[2]');
+      await button.waitForDisplayed();
+      await button.click();
+    });    
   });
