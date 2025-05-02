@@ -63,7 +63,8 @@ describe('Log Out of My TRR', () => {
       });
     
       // iOS class chain
-      //const selector = await '**/XCUIElementTypeStaticText[`name == "Log Out"`][2]'
+      //const selector = '**/XCUIElementTypeStaticText[`name == "Log Out"`][2]'
+      //const selector = '**/XCUIElementTypeButton[`label == \"Log Out\"`][2]'
       //const logout = await $(`-ios class chain:${selector}`)
       //await logout.click()
       
