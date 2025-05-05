@@ -15,7 +15,7 @@ export const config = {
         "lt:options": {
           "w3c": true,
           "app": process.env.LT_APP_ID||"lt://APP10160312371746130535360779",
-          "build": "2025-05-02 - TRR iOS Inconsistencies",
+          "build": "TRR - Best of 25",
           "platformName": "ios",
           "appium:deviceName": "iPhone 16",
           "appium:platformVersion": "18.1",

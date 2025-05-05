@@ -4,7 +4,7 @@ export const config = {
   
     updateJob: true,
     reporters: ["spec"],
-    specs: ["./test/specs/*.js"],
+    specs: ["./test/specs/ios-alerts-test.js"],
     exclude: [],
     services: ["lambdatest"],
   
@@ -15,8 +15,7 @@ export const config = {
         "lt:options": {
           "w3c": true,
           "app": process.env.LT_APP_ID||"lt://APP10160502331742512700776356",
-          "build": "WebdriverIO-iOS-Simulator",
-          "name": "Sample iOS Simulator Test - WebDriverIO",
+          "build": "Testing iOS Class Chain",
           "platformName": "ios",
           "appium:deviceName": "iPhone 16",
           "appium:platformVersion": "18.1",

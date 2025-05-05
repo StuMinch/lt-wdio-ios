@@ -63,14 +63,13 @@ describe('Log Out of My TRR', () => {
       });
     
       // iOS class chain
-      //const selector = '**/XCUIElementTypeStaticText[`name == "Log Out"`][2]'
-      //const selector = '**/XCUIElementTypeButton[`label == \"Log Out\"`][2]'
-      //const logout = await $(`-ios class chain:${selector}`)
-      //await logout.click()
+      const selector = '**/XCUIElementTypeButton[`name == "Log Out"`]'
+      const logout = await $(`-ios class chain:${selector}`)
+      await logout.click()
       
       // XPATH
-      const button = await $('(//XCUIElementTypeButton[@name="Log Out"])[2]');
-      await button.waitForDisplayed();
-      await button.click();
+      //const button = await $('(//XCUIElementTypeButton[@name="Log Out"])[2]');
+      //await button.waitForDisplayed();
+      //await button.click();
     });    
   });
