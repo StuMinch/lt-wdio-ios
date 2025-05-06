@@ -1,5 +1,5 @@
 import CurrencyScreen from '../objects/CurrencyScreen.js';
-import WalkthroughPrompts from '../objects/WalkthoughPrompts.js';
+import WalkthroughPrompts from '../objects/WalkthroughPrompts.js';
 
 describe('Log Out of My TRR', () => {  
     it('should tap My TRR button', async () => {
@@ -30,28 +30,28 @@ describe('Log Out of My TRR', () => {
       button.click();
     });
 
-    it('should react to currency check if present', async () => {
+    it('should react to currency check if present', () => {
       try {
-        await CurrencyScreen.shopInUsd.waitForDisplayed({ timeout: 8000 });
-        await CurrencyScreen.updateCurrency.click();
+        CurrencyScreen.shopInUsd.waitForDisplayed({ timeout: 8000 });
+        CurrencyScreen.updateCurrency.click();
       } catch (error) {
         console.warn('Currency prompt not shown or interaction failed:', error.message);
       }
     });  
 
-    it('should tap next if present', async () => {
+    it('should tap next if present', () => {
         try {
-            await WalkthroughPrompts.referralNext.waitForDisplayed({ timeout: 8000 });
-            await WalkthroughPrompts.referralNext.click();
+            WalkthroughPrompts.referralNext.waitForDisplayed({ timeout: 8000 });
+            WalkthroughPrompts.referralNext.click();
           } catch (error) {
             console.warn('The next button did not appear:', error.message);
           }
     });
 
-    it('should tap got it', async () => {
+    it('should tap got it', () => {
         try {
-            await WalkthroughPrompts.referralGotIt.waitForDisplayed({ timeout: 8000 });
-            await WalkthroughPrompts.referralGotIt.click();
+            WalkthroughPrompts.referralGotIt.waitForDisplayed({ timeout: 8000 });
+            WalkthroughPrompts.referralGotIt.click();
           } catch (error) {
             console.warn('The got it button did not appear:', error.message);
           }
@@ -63,10 +63,10 @@ describe('Log Out of My TRR', () => {
       button.click();
     });
 
-    it('should tap got it', async () => {
+    it('should tap got it', () => {
         try {
-            await WalkthroughPrompts.gotIt.waitForDisplayed({ timeout: 8000 });
-            await WalkthroughPrompts.gotIt.click();
+            WalkthroughPrompts.gotIt.waitForDisplayed({ timeout: 8000 });
+            WalkthroughPrompts.gotIt.click();
           } catch (error) {
             console.warn('The got it button did not appear:', error.message);
           }
