@@ -1,4 +1,5 @@
 import MainScreen from '../objects/MainScreen';
+import TextScreen from '../objects/TextScreen';
 
 describe('Test inputting text', () => {
     it('should tap on text', async () => {
@@ -7,11 +8,12 @@ describe('Test inputting text', () => {
       });
     
     it('should enter text', async () => {
-      const textField = await $('//XCUIElementTypeTextField[@value="Enter your text here"]')
-      const submitButton = await $('~Submit')
-      await textField.waitForDisplayed({ timeout: 5000 });
-      textField.setValue('Hello World');
-      submitButton.click();
-      await driver.pause(5000);
+      await TextScreen.textField.waitForDisplayed({ timeout: 5000 });
+      await TextScreen.textField.setValue('Hello World');
+    });
+
+    it('should tap submit button', async () => {
+      await TextScreen.submitButton.waitForDisplayed({ timeout: 5000 });
+      await TextScreen.submitButton.click();
     });
   });
