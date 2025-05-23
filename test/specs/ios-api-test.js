@@ -1,14 +1,16 @@
+import MainScreen from '../objects/MainScreen';
+import ApiCallsScreen from '../objects/ApiCallsScreen';
+
 describe('Test API Calls', () => {  
-    it('should tap send 25 get requests button', async () => {
-      const apiCalls = await $('//*[@value="API Calls"]');
-      await apiCalls.waitForDisplayed({ timeout: 5000 });
-      apiCalls.click();
+    it('should tap api calls menu', async () => {
+      await MainScreen.apiCalls.waitForDisplayed({ timeout: 5000 });
+      await MainScreen.apiCalls.click();
     });
     
     it('should tap send 25 get requests button', async () => {
-      const sendRequest = await $('//*[@name="Send 25 GET Requests"]');
-      await sendRequest.waitForDisplayed({ timeout: 5000 });
-      sendRequest.click();
-      await driver.pause(10000);
+      await ApiCallsScreen.send25GetRequestsButton.waitForDisplayed({ timeout: 5000 });
+      await ApiCallsScreen.send25GetRequestsButton.click();
+      await driver.pause(5000);
+      driver.execute("smartui.takeScreenshot=Tap 25 GET Requests");
     });
   });
