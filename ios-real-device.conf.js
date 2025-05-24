@@ -4,7 +4,7 @@ export const config = {
   
     updateJob: true,
     reporters: ["spec"],
-    specs: ["./test/specs/ios-text-field-test.js"],
+    specs: ["./test/specs/*.js"],
     exclude: [],
     services: ["lambdatest"],
   

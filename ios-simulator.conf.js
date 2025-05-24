@@ -4,7 +4,7 @@ export const config = {
   
     updateJob: true,
     reporters: ["spec"],
-    specs: ["./test/specs/ios-alerts-test.js"],
+    specs: ["./test/specs/*.js"],
     exclude: [],
     services: ["lambdatest"],
   
@@ -22,6 +22,7 @@ export const config = {
           "appium:automationName": "XCUITest",
           "appiumVersion": "2.16.2",
           "network": true,
+          "visual": true,
           "devicelog": true
         },
       },
@@ -31,7 +32,7 @@ export const config = {
     coloredLogs: true,
     screenshotPath: "./errorShots/",
     baseUrl: "",
-    waitforTimeout: 10000,
+    waitforTimeout: 20000,
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,
     path: "/wd/hub",
