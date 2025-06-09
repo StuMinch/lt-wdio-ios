@@ -1,5 +1,5 @@
-import MainScreen from '../objects/MainScreen';
-import TextScreen from '../objects/TextScreen';
+import MainScreen from '../screens/MainScreen';
+import TextScreen from '../screens/TextScreen';
 
 describe('Test inputting text', () => {
     it('should tap on text', async () => {

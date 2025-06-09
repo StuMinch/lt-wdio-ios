@@ -1,4 +1,4 @@
-// test/objects/MapScreen.js
+// test/screens/MapScreen.js
 class MapScreen {
     get allowOnceButton() {
         return $('~Allow Once');

@@ -1,4 +1,4 @@
-// test/objects/MainScreen.js
+// test/screens/MainScreen.js
 class MainScreen {
     get alerts() {
       return $('//*[@name="Alerts"]');

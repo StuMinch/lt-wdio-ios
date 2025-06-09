@@ -1,4 +1,4 @@
-// test/objects/TextScreen.js
+// test/screens/TextScreen.js
 class TextScreen {
     get textField() {
       return $('//*[@value="Enter your text here"]');

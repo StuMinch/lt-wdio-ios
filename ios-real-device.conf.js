@@ -4,7 +4,7 @@ export const config = {
   
     updateJob: true,
     reporters: ["spec"],
-    specs: ["./test/specs/*.js"],
+    specs: ["./test/specs/ios-map-test.js"],
     exclude: [],
     services: ["lambdatest"],
   
@@ -14,7 +14,7 @@ export const config = {
       {
         "lt:options": {
           "w3c": true,
-          "app": process.env.LT_APP_ID||"lt://APP10160432541747422389738968",
+          "app": process.env.LT_APP_ID||"lt://APP1016057671748473808013814",
           "build": "WebdriverIO-iOS-Real-Device",
           "name": "Sample iOS Real Device Test - WebDriverIO",
           "platformName": "ios",

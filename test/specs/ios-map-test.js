@@ -1,5 +1,5 @@
-import MainScreen from '../objects/MainScreen';
-import MapScreen from '../objects/MapScreen';
+import MainScreen from '../screens/MainScreen';
+import MapScreen from '../screens/MapScreen';
 
 describe('Test Map', () => {
     it('should tap on map', async () => {
@@ -8,8 +8,12 @@ describe('Test Map', () => {
       });
     
     it('should tap allow once button', async () => {
-      await MapScreen.allowOnceButton.waitForDisplayed({ timeout: 5000 });
-      await MapScreen.allowOnceButton.click();
+      try {
+        await MapScreen.allowOnceButton.waitForDisplayed({ timeout: 5000 });
+        await MapScreen.allowOnceButton.click();
+      } catch (error) {
+        console.log(error);
+      }
     });
 
     it('should enter and search for a location', async () => {

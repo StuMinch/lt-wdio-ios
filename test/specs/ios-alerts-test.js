@@ -1,5 +1,5 @@
-import MainScreen from '../objects/MainScreen';
-import AlertsScreen from '../objects/AlertsScreen';
+import MainScreen from '../screens/MainScreen';
+import AlertsScreen from '../screens/AlertsScreen';
 
 describe('Test Generating Alerts', () => {
     it('should tap on alerts', async () => {

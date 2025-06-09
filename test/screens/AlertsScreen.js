@@ -1,4 +1,4 @@
-// test/objects/AlertsScreen.js
+// test/screens/AlertsScreen.js
 class AlertsScreen {
     get generateAlertButton() {
       return $('~Generate Alert');
