@@ -4,7 +4,7 @@ export const config = {
   
     updateJob: true,
     reporters: ["spec"],
-    specs: ["./test/specs/ios-map-test.js"],
+    specs: ["./test/specs/ios-alerts-test.js"],
     exclude: [],
     services: ["lambdatest"],
   
@@ -20,6 +20,7 @@ export const config = {
           "platformName": "ios",
           "deviceName": "iPhone 16",
           "network": true,
+          "autoAcceptAlerts": true,
           "devicelog": true,
           "visual": true,
           "isRealMobile": true,

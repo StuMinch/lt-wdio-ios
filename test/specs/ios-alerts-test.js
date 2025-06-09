@@ -12,12 +12,8 @@ describe('Test Generating Alerts', () => {
       await AlertsScreen.generateAlertButton.click();
     });
 
-    it('should tap OK button', async () => {
-      try {
-        await AlertsScreen.okButton.waitForDisplayed({ timeout: 5000 });
-        await AlertsScreen.okButton.click();
-      } catch (error) {
-        console.warn('The OK button did not appear:', error.message);
-      }
+    it('should confirm generate button is visible again', async () => {
+      await AlertsScreen.generateAlertButton.waitForDisplayed({ timeout: 5000 });
+      expect(await AlertsScreen.generateAlertButton.isDisplayed()).toBe(true);
     });
   });
