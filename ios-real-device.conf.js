@@ -4,7 +4,7 @@ export const config = {
   
     updateJob: true,
     reporters: ["spec"],
-    specs: ["./test/specs/ios-alerts-test.js"],
+    specs: ["./test/specs/ios-map-test.js"],
     exclude: [],
     services: ["lambdatest"],
   
@@ -15,12 +15,16 @@ export const config = {
         "lt:options": {
           "w3c": true,
           "app": process.env.LT_APP_ID||"lt://APP1016057671748473808013814",
+          // Updated app with Initiate Alert button instead of Generate Alert
+          //"app": process.env.LT_APP_ID || "lt://APP1016050911749660821983382",
           "build": "WebdriverIO-iOS-Real-Device",
           "name": "Sample iOS Real Device Test - WebDriverIO",
           "platformName": "ios",
-          "deviceName": "iPhone 16",
+          "deviceName": "iPhone 16 Pro",
           "network": true,
-          "autoAcceptAlerts": true,
+          //"autoAcceptAlerts": true,
+          //"autoGrantPermissions": true,
+          "autoHeal": true,
           "devicelog": true,
           "visual": true,
           "isRealMobile": true,

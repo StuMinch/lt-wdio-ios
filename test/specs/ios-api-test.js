@@ -1,5 +1,5 @@
-import MainScreen from '../objects/MainScreen';
-import ApiCallsScreen from '../objects/ApiCallsScreen';
+import MainScreen from '../screens/MainScreen';
+import ApiCallsScreen from '../screens/ApiCallsScreen';
 
 describe('Test API Calls', () => {  
     it('should tap api calls menu', async () => {
